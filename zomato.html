@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+   <div class="continer">
+    <h1 id="cart">Cart</h1>
+    <table id="table">
+     <tr>
+        <th>S.No</th>
+        <th>Product Image</th>
+        <th>Product Name</th>
+        <th>Price</th>
+        <th>Amount</th>
+        <th>Total money</th>
+     </tr>
+     <tr>
+        <td>1.</td>
+        <td id="food"> <img src="./image/download.svg" alt=""></td>
+        <td>Phonepestoke </td>
+        <td id="price">$199</td>
+        <td> <button id="decmentbtn" class="btn">-</button>
+            <span id="amount">1</span>
+        <button id="incrementbtn" class="btn">+</button>
+        </td>
+        <td id="totalmoney">$199</td>
+     </tr>
+     <tr>
+        <td>2.</td>
+        <td id="food"> <img src="./image/1654517453942.png" alt=""></td>
+        <td>Phonepestoke </td>
+        <td id="price">$119</td>
+        <td> <button id="decmentbtn1" class="btn">-</button>
+            <span id="amount1">1</span>
+        <button id="incrementbtn1" class="btn">+</button>
+        </td>
+        <td id="totalmoney1">$119</td>
+     </tr>
+     <tr>
+        <td>3.</td>
+        <td id="food"> <img src="./image/footer-logo.svg" alt=""></td>
+        <td>Phonepestoke </td>
+        <td id="price">$99</td>
+        <td> <button id="decmentbtn2" class="btn">-</button>
+            <span id="amount2">1</span>
+        <button id="incrementbtn2" class="btn">+</button>
+        </td>
+        <td id="totalmoney2">$99</td>
+     </tr>
+    </table>
+    <br>
+    <div ><button id="payment">Proceed to payment </button></div>
+   </div>
+   <script> 
+   let counterone=1;
+   let total=0;
+    document.getElementById("incrementbtn").addEventListener("click",()=>{
+        counterone++
+        let increse=document.getElementById("amount").innerText=counterone;
+        total=counterone*199;
+        document.getElementById("totalmoney").innerText="$"+total;
+    })
+    document.getElementById("decmentbtn").addEventListener("click",()=>{     
+        if(counterone>0)
+          {  counterone--;           
+        
+        let decrese= document.getElementById("amount").innerText=counterone;
+        total=counterone*199;
+        document.getElementById("totalmoney").innerText="$"+total;}
+
+    })
+ 
+    let counterone2=1
+    document.getElementById("incrementbtn1").addEventListener("click",()=>{
+        counterone2++
+        let increse=document.getElementById("amount1").innerText=counterone2;
+        total=counterone2*119;
+        document.getElementById("totalmoney1").innerText="$"+total;
+    })
+    document.getElementById("decmentbtn1").addEventListener("click",()=>{     
+        if(counterone2>0)
+          {  counterone2--;           
+        
+        let decrese= document.getElementById("amount1").innerText=counterone2;
+        total=counterone2*119;
+        document.getElementById("totalmoney1").innerText="$"+total;}
+
+    })
+    let counterone3=1
+    document.getElementById("incrementbtn2").addEventListener("click",()=>{
+        counterone3++
+        let increse=document.getElementById("amount2").innerText=counterone3;
+        total=counterone3*99;
+        document.getElementById("totalmoney2").innerText="$"+total;
+    })
+    document.getElementById("decmentbtn2").addEventListener("click",()=>{     
+        if(counterone3>0)
+          {  counterone3--;           
+        
+        let decrese= document.getElementById("amount2").innerText=counterone3;
+        total=counterone3*99;
+        document.getElementById("totalmoney2").innerText="$"+total;}
+
+    })
+  
+
+   </script>
+</body>
+</html>
